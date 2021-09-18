@@ -18,5 +18,7 @@ int main()
         cout<<j<<"\n";
         cout<<"hello";
     }
+    vector<int> v;
+    v.push_back(i);
      return 0;
 }
