@@ -15,7 +15,7 @@ int main()
     vector<int> s1={1 ,5,8,9,6,4,6,2};
         for ( auto i : s1)
         {   
-            cout<<i<<" ";
+            cout<<i<<"\n";
         }
      return 0;
 }
