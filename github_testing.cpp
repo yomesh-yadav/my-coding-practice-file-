@@ -16,6 +16,7 @@ int main()
     for(int j=0;i<10;j++)
     {
         cout<<j<<"\n";
+        cout<<"hello";
     }
      return 0;
 }
