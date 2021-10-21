@@ -11,8 +11,20 @@
 using namespace std; 
 
 int main() 
-{  map<int,int>m;
-    m[5]=1;
-    cout<<m[5];
-    return 0;
+{
+    int n ;
+    cin>>n;
+    while(n--)
+    {
+        string s;
+        cin>>s;
+        int si=s.size();
+        if(si<=10)
+        {
+            cout<<s<<endl;
+        }else{
+            cout<<s[0]<<si-2<<s[si-1]<<endl;
+        }
+    }
+     return 0;
 }

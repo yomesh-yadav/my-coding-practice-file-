@@ -11,8 +11,23 @@
 using namespace std; 
 
 int main() 
-{  map<int,int>m;
-    m[5]=1;
-    cout<<m[5];
-    return 0;
+{
+    string s;
+    cin>>s;
+    vector<char>v(3,0);
+    for(int i =0;i<s.size();i=i+2)
+    {
+        v[s[i]-'1']++;
+    }
+   int i =0;
+    while(i<3)
+    {
+        while(v[i]>0)
+        {
+            cout<<v[i]<<"+";
+        }
+
+
+    }
+     return 0;
 }
