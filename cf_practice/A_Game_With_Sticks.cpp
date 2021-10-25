@@ -11,11 +11,15 @@
 using namespace std; 
 
 int main() 
-{  map<int,int>m;
-    m[5]=1;
-    cout<<m[5]<<endl;
-    auto num = 0b100;
-    cout<<num<<endl;
-    cout<<(3&54);
-    return 0;
+{
+    int n,m;
+    cin>>n>>m;
+    int mn = min(n,m);
+    if(mn%2==0)
+    {
+        cout<<"Malvika";
+    }else{
+        cout<<"Akshat";
+    }
+     return 0;
 }

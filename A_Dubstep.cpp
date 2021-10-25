@@ -11,11 +11,15 @@
 using namespace std; 
 
 int main() 
-{  map<int,int>m;
-    m[5]=1;
-    cout<<m[5]<<endl;
-    auto num = 0b100;
-    cout<<num<<endl;
-    cout<<(3&54);
-    return 0;
+{
+    string s;
+    cin>>s;
+    for(int i =0;i<s.size()-3;i++)
+    {
+            if(i+3<s.size())
+            {
+                
+            }
+    }
+     return 0;
 }
