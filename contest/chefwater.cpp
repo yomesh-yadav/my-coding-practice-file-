@@ -7,19 +7,20 @@
 #define F first
 #define S second
 #define MP Make_pair
-#define rep(i,a,b) for(int i = a; i<=b;i++
+#define mod 1e9+7
+#define input for(auto c : v) cin>>c;
 using namespace std; 
 
 int main() 
 {
-    string s;
-    cin>>s;
-    for(int i =0;i<s.size()-3;i++)
+    int t;
+    cin>>t;
+    while(t--)
     {
-            if(i+3<s.size())
-            {
-                
-            }
+        int n ,v;
+        cin>>n>>v;
+        int ans = ((n-1)*(n))/2;
+        cout<<ans<<" "<<ans<<endl;
     }
      return 0;
 }
