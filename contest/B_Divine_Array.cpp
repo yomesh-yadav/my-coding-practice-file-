@@ -27,13 +27,13 @@ int main()
         }
         int q ;
         cin>>q;
-        
-        vector<vector<int>> v(mx+1, vector<int>(n, 0));
+        int row = ceil(log2(n));
+        vector<vector<int>> v(row+2, vector<int>(n, 0));
         for (int j = 0; j < n; j++)
         {
             v[0][j] = arr[j];
         }
-        for (int i = 1; i < mx+1; i++)
+        for (int i = 1; i < row+2; i++)
         {
             for (int j = 0; j < n; j++)
             {
@@ -53,9 +53,9 @@ int main()
         {
             int x,k;
             cin>>x>>k;
-            if(k>mx)
+            if(k>row)
             {
-                cout<<v[mx][x-1]<<endl;
+                cout<<v[row+1][x-1]<<endl;
             }else{
                 cout<<v[k][x-1]<<endl;
             }

@@ -1,0 +1,1 @@
+{"name":"Local: chefwater","url":"c:\\Users\\YOMESH YADAV\\Desktop\\c++\\contest\\chefwater.cpp","tests":[{"id":1635349249736,"input":"3\n3 1\n4 2\n4 3","output":"3 3\n6 4\n6 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\YOMESH YADAV\\Desktop\\c++\\contest\\chefwater.cpp","group":"local","local":true}
