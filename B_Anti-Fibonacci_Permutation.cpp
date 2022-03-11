@@ -13,29 +13,35 @@ using namespace std;
 
 void solve()
 {
-    int n ;cin>>n;
-    map<int,int> mt;
+    int n;cin>>n;
+    int k=n;
+    vi v;
     for(int i=0;i<n;i++)
     {
-        int a;cin>>a;
-        mt[a]++;
+        v.push_back(k);
+        k--;
     }
+    int m=n/2+1;
+    sort(v.begin(),v.begin()+m);
     int cnt=0;
-    for(auto it =mt.begin();it!=mt.end();it++)
-    {
-        int k =-1*(it->first);
-        if(it->first==0)
+    do {
+        if(cnt==n)
         {
-            cnt++;
-        }else if (it->second>1 && mt.find(k)==mt.end())
-        {
-            cnt+=2;
-        }else if (it->second>=1)
-        {
-            cnt++;
+            break;
         }
+        for(int i =0;i<n;i++)
+        {
+            cout<<v[i]<<" ";
+        }
+        cout<<endl;
+        cnt++;
+
+		
+	} while (next_permutation(v.begin(), v.begin() +m ));
+    if(n==3)
+    {
+        cout<<3<<" "<<1<<" "<<2<<endl;
     }
-    cout<<cnt<<endl;
 }
 signed main() 
 {

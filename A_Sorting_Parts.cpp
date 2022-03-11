@@ -14,28 +14,28 @@ using namespace std;
 void solve()
 {
     int n ;cin>>n;
-    map<int,int> mt;
+    int arr[n];
+    int mx= INT_MIN;
+    int mine=INT_MAX;
     for(int i=0;i<n;i++)
     {
-        int a;cin>>a;
-        mt[a]++;
-    }
-    int cnt=0;
-    for(auto it =mt.begin();it!=mt.end();it++)
-    {
-        int k =-1*(it->first);
-        if(it->first==0)
+        cin>>arr[i];
+        if(i<=n-2)
         {
-            cnt++;
-        }else if (it->second>1 && mt.find(k)==mt.end())
+            mx= max(mx,arr[i]);
+        }
+        if(i>=1)
         {
-            cnt+=2;
-        }else if (it->second>=1)
-        {
-            cnt++;
+            mine= min(mine,arr[i]);
         }
     }
-    cout<<cnt<<endl;
+    if(mx>arr[n-1] || mine < arr[0])
+    {
+        cout<<"YES\n";
+    }else{
+        cout<<"NO\n";
+    }
+
 }
 signed main() 
 {

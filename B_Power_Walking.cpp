@@ -14,28 +14,22 @@ using namespace std;
 void solve()
 {
     int n ;cin>>n;
-    map<int,int> mt;
-    for(int i=0;i<n;i++)
+    vi arr(n);
+    map<int,int>mt;
+    for(int i =0;i<n;i++)
     {
-        int a;cin>>a;
-        mt[a]++;
+        cin>>arr[i];
+        mt[arr[i]]++;;
     }
-    int cnt=0;
-    for(auto it =mt.begin();it!=mt.end();it++)
+    for(int i=0;i<mt.size();i++)
     {
-        int k =-1*(it->first);
-        if(it->first==0)
-        {
-            cnt++;
-        }else if (it->second>1 && mt.find(k)==mt.end())
-        {
-            cnt+=2;
-        }else if (it->second>=1)
-        {
-            cnt++;
-        }
+        cout<<mt.size()<<" ";
     }
-    cout<<cnt<<endl;
+    for(int i= mt.size();i<n;i++)
+    {
+        cout<<i+1<<" ";
+    }
+    cout<<endl;
 }
 signed main() 
 {

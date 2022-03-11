@@ -13,42 +13,33 @@ using namespace std;
 
 void solve()
 {
-    int n, l;
-    cin >> n >> l;
+    int n;
+    cin >> n;
     int arr[n];
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
     int ans = 0;
-    for (int i = 0; i < l; i++)
+    for (int i = 1; i < n - 1; i++)
     {
-        int cnt[2];
-        cnt[1] = 0, cnt[0] = 0;
-        for (int j = 0; j < n; j++)
+        if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1])
         {
-            if (arr[j] & (1 << i))
+            if (i + 2 < n)
             {
-                cnt[1]++;
+                arr[i+1]=max(arr[i],arr[i+2]);
+            }else{
+                arr[i+1]=max(arr[i+1],arr[i]);
             }
-            else
-            {
-                cnt[0]++;
-            }
+            ans++;
         }
-            int val;
-            if (cnt[1] > cnt[0])
-            {
-                val = 1;
-            }
-            else
-            {
-                val = 0;
-            }
-            ans |= val * (1 << i);
-        // cout<<ans<<endl;
     }
-    cout << ans << endl;
+    cout<<ans<<endl;
+    for(int i =0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
 }
 signed main()
 {

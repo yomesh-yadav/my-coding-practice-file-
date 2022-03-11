@@ -13,29 +13,27 @@ using namespace std;
 
 void solve()
 {
-    int n ;cin>>n;
-    map<int,int> mt;
+    int n;cin>>n;
+    int arr[n];
     for(int i=0;i<n;i++)
     {
-        int a;cin>>a;
-        mt[a]++;
+        cin>>arr[i];
     }
-    int cnt=0;
-    for(auto it =mt.begin();it!=mt.end();it++)
+    int search;
+   for(int i=0;i<n;i++)
+   {
+       if(arr[i]!=(i+1))
+       {
+           search= find(arr,arr+n,i+1)-arr;
+           reverse(arr+i,arr+search+1);
+           break;
+       }
+   }
+    for(int i=0;i<n;i++)
     {
-        int k =-1*(it->first);
-        if(it->first==0)
-        {
-            cnt++;
-        }else if (it->second>1 && mt.find(k)==mt.end())
-        {
-            cnt+=2;
-        }else if (it->second>=1)
-        {
-            cnt++;
-        }
+        cout<<arr[i]<<" ";
     }
-    cout<<cnt<<endl;
+    cout<<endl;
 }
 signed main() 
 {

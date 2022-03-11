@@ -1,21 +1,43 @@
-#include <bits/stdc++.h> 
+#include <bits/stdc++.h>
 
-#define ll long long
+#define int long long
 #define ull unsigned long long
-#define vi  vector<int> 
+#define vi vector<int>
 #define pb push_back
 #define F first
 #define S second
 #define MP Make_pair
-#define mod 1e9+7
-#define input for(auto c : v) cin>>c;
-using namespace std; 
+#define mod 1e9 + 7
+#define endl '\n'
+using namespace std;
 
-int main() 
+void solve()
 {
-    for(int i =0;i<10;i++)
-    {
-        cout<<i<<" ";
+    int n ,m;
+    cin>>n>>m;
+    int arr[m];
+    for(int i =0;i<m;i++){
+        cin>>arr[i];
     }
-     return 0;
+    sort(arr,arr+m);
+    int j=m-1,ans=INT_MAX;
+    for(int i=m-n;i>=0;i--)
+    {
+            ans= min(arr[j]-arr[i],ans);
+            j--;
+    }
+    cout<<ans<<endl;
+}
+signed main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    // int _t;
+    // cin >> _t;
+    // while (_t--)
+    // {
+        solve();
+    // }
+    return 0;
 }
